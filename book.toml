@@ -1,0 +1,12 @@
+[book]
+authors = "Gabriel Sanches"
+language = "en"
+multilingual = false
+src = "src"
+title = "Nord Template"
+
+[output.html]
+additional-css = [
+  "theme/light.css",
+  "theme/dark.css",
+]
