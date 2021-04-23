@@ -28,144 +28,84 @@
   --nord13: #EBCB8B;
   --nord14: #A3BE8C;
   --nord15: #B48EAD;
+
+  /* Both variants should be consistent between them. */
+  --bg: var(--base-bg);
+  --fg: var(--base-fg);
+
+  --sidebar-bg: var(--alt-bg);
+  --sidebar-fg: var(--alt-fg);
+  --sidebar-non-existant: var(--disabled);
+  --sidebar-active: var(--clickable);
+  --sidebar-spacer: var(--disabled);
+
+  --scrollbar: var(--clickable);
+
+  --icons: var(--disabled);
+  --icons-hover: var(--base-fg);
+
+  --links: var(--clickable);
+
+  --inline-code-color: var(--alt-fg);
+
+  --theme-popup-bg: var(--alt-bg);
+  --theme-popup-border: var(--disabled);
+  --theme-hover: var(--disabled);
+
+  --quote-bg: var(--quote);
+  --quote-border: var(--quote);
+
+  --table-border-color: var(--base-fg);
+  --table-header-bg: var(--base-bg);
+  --table-alternate-bg: var(--quote);
+
+  --searchbar-border-color: var(--disabled);
+  --searchbar-bg: var(--alt-bg);
+  --searchbar-fg: var(--alt-fg);
+  --searchbar-shadow-color: var(--alt-bg);
+  --searchresults-header-fg: var(--results);
+  --searchresults-border-color: var(--base-fg);
+  --searchresults-li-bg: var(--selected);
+  --search-mark-bg: var(--selected);
 }
 
 /* Themes */
 
 .light {
-  --bg: var(--nord4);
-  --fg: var(--nord0);
-
-  --sidebar-bg: var(--nord6);
-  --sidebar-fg: var(--nord3);
-  --sidebar-non-existant: var(--nord9);
-  --sidebar-active: var(--links);
-  --sidebar-spacer: var(--sidebar-non-existant);
-
-  --scrollbar: var(--sidebar-active);
-
-  --icons: var(--sidebar-non-existant);
-  --icons-hover: var(--fg);
-
-  --links: var(--nord11);
-
-  --inline-code-color: var(--sidebar-fg);
-
-  --theme-popup-bg: var(--sidebar-bg);
-  --theme-popup-border: var(--sidebar-non-existant);
-  --theme-hover: var(--nord8);
-
-  --quote-bg: var(--sidebar-bg);
-  --quote-border: var(--nord5);
-
-  --table-border-color: var(--fg);
-  --table-header-bg: var(--bg);
-  --table-alternate-bg: var(--sidebar-bg);
-
-  --searchbar-border-color: var(--sidebar-non-existant);
-  --searchbar-bg: var(--sidebar-bg);
-  --searchbar-fg: var(--sidebar-fg);
-  --searchbar-shadow-color: var(--quote-border);
-  --searchresults-header-fg: var(--nord14);
-  --searchresults-border-color: var(--fg);
-  --searchresults-li-bg: var(--nord15);
-  --search-mark-bg: var(--nord13);
-}
-
-.light blockquote {
-  color: var(--nord3);
-}
-
-.light table tbody tr:nth-child(2n) {
-    color: var(--sidebar-fg);
+  --base-bg: var(--nord4);
+  --base-fg: var(--nord0);
+  --alt-bg: var(--nord6);
+  --alt-fg: var(--nord2);
+  --disabled: var(--nord8);
+  --quote: var(--nord5);
+  --clickable: var(--nord11);
+  --results: var(--nord14);
+  --selected: var(--nord13);
 }
 
 .dark {
-  --bg: var(--nord2);
-  --fg: var(--nord6);
-
-  --sidebar-bg: var(--nord0);
-  --sidebar-fg: var(--nord4);
-  --sidebar-non-existant: var(--nord9);
-  --sidebar-active: var(--links);
-  --sidebar-spacer: var(--sidebar-non-existant);
-
-  --scrollbar: var(--sidebar-active);
-
-  --icons: var(--sidebar-non-existant);
-  --icons-hover: var(--fg);
-
-  --links: var(--nord12);
-
-  --inline-code-color: var(--sidebar-fg);
-
-  --theme-popup-bg: var(--sidebar-bg);
-  --theme-popup-border: var(--sidebar-non-existant);
-  --theme-hover: var(--nord10);
-
-  --quote-bg: var(--sidebar-bg);
-  --quote-border: var(--nord1);
-
-  --table-border-color: var(--fg);
-  --table-header-bg: var(--bg);
-  --table-alternate-bg: var(--sidebar-bg);
-
-  --searchbar-border-color: var(--sidebar-non-existant);
-  --searchbar-bg: var(--sidebar-bg);
-  --searchbar-fg: var(--sidebar-fg);
-  --searchbar-shadow-color: var(--quote-border);
-  --searchresults-header-fg: var(--nord14);
-  --searchresults-border-color: var(--fg);
-  --searchresults-li-bg: var(--nord15);
-  --search-mark-bg: var(--nord13);
-}
-
-.dark table tbody tr:nth-child(2n) {
-    color: var(--sidebar-fg);
+  --base-bg: var(--nord2);
+  --base-fg: var(--nord6);
+  --alt-bg: var(--nord0);
+  --alt-fg: var(--nord4);
+  --disabled: var(--nord10);
+  --quote: var(--nord1);
+  --clickable: var(--nord12);
+  --results: var(--nord14);
+  --selected: var(--nord13);
 }
 
 @media (prefers-color-scheme: dark) {
+  /* Same as dark. */
   .light.no-js {
-    --bg: var(--nord2);
-    --fg: var(--nord6);
-
-    --sidebar-bg: var(--nord0);
-    --sidebar-fg: var(--nord4);
-    --sidebar-non-existant: var(--nord9);
-    --sidebar-active: var(--links);
-    --sidebar-spacer: var(--sidebar-non-existant);
-
-    --scrollbar: var(--sidebar-active);
-
-    --icons: var(--sidebar-non-existant);
-    --icons-hover: var(--fg);
-
-    --links: var(--nord12);
-
-    --inline-code-color: var(--sidebar-fg);
-
-    --theme-popup-bg: var(--sidebar-bg);
-    --theme-popup-border: var(--sidebar-non-existant);
-    --theme-hover: var(--nord10);
-
-    --quote-bg: var(--sidebar-bg);
-    --quote-border: var(--nord1);
-
-    --table-border-color: var(--fg);
-    --table-header-bg: var(--bg);
-    --table-alternate-bg: var(--sidebar-bg);
-
-    --searchbar-border-color: var(--sidebar-non-existant);
-    --searchbar-bg: var(--sidebar-bg);
-    --searchbar-fg: var(--sidebar-fg);
-    --searchbar-shadow-color: var(--quote-border);
-    --searchresults-header-fg: var(--nord14);
-    --searchresults-border-color: var(--fg);
-    --searchresults-li-bg: var(--nord15);
-    --search-mark-bg: var(--nord13);
-  }
-
-  .light.no-js table tbody tr:nth-child(2n) {
-    color: var(--sidebar-fg);
+    --base-bg: var(--nord2);
+    --base-fg: var(--nord6);
+    --alt-bg: var(--nord0);
+    --alt-fg: var(--nord4);
+    --disabled: var(--nord10);
+    --quote: var(--nord1);
+    --clickable: var(--nord12);
+    --results: var(--nord14);
+    --selected: var(--nord13);
   }
 }
